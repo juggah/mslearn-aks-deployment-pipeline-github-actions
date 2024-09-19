@@ -1,12 +1,12 @@
 #!/bin/bash
 
 echo "Defining variables..."
-export RESOURCE_GROUP_NAME=mslearn-gh-pipelines-$RANDOM
-export AKS_NAME=contoso-video
-export ACR_NAME=contosocontainerregistry$RANDOM
+export RESOURCE_GROUP_NAME=rg-twtest-tmp
+export AKS_NAME=akstwonenode
+export ACR_NAME=acrtmp
 
 echo "Searching for resource group..."
-az group create -n $RESOURCE_GROUP_NAME -l eastus
+az group create -n $RESOURCE_GROUP_NAME -l westeurope
 
 echo "Creating cluster..."
 az aks create \
@@ -18,7 +18,6 @@ az aks create \
   --enable-managed-identity \
   --generate-ssh-keys \
   --node-vm-size Standard_B2s
-
 echo "Obtaining credentials..."
 az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP_NAME
 
