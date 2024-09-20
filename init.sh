@@ -2,8 +2,8 @@
 
 echo "Defining variables..."
 export RESOURCE_GROUP_NAME=rg-twtest-tmp
-export AKS_NAME=akstwonenode
-export ACR_NAME=acrtmp
+export AKS_NAME=aks-akstwonenode-tmp
+export ACR_NAME=acracrtmp
 
 echo "Searching for resource group..."
 az group create -n $RESOURCE_GROUP_NAME -l westeurope
