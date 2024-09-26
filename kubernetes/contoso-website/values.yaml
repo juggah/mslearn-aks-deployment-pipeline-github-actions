@@ -1,0 +1,7 @@
+image:
+  repository: acracrtmp
+  name: contoso-website
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: latest
+dns:
+  name: faa8b2680bf240378756.westeurope.aksapp.io
