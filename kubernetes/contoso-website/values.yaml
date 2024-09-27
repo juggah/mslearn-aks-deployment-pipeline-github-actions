@@ -1,5 +1,5 @@
 image:
-  repository: acracrtmp
+  registry: acracrtmp
   name: contoso-website
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
